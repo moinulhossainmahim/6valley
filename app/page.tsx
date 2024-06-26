@@ -1,7 +1,9 @@
+import Hero from "@/components/shared/hero";
+
 export default function Home() {
   return (
     <main>
-      Welcome to 6Valley
+      <Hero />
     </main>
   );
 }

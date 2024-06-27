@@ -6,6 +6,7 @@ import "./globals.css";
 import OfferNotification from "@/components/shared/offerNotification";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import ReactQueryClientProvider from "@/utils/ReactQueryClientProvider";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({
       <body className={mulish.className}>
         <OfferNotification />
         <Header />
-        {children}
+        <ReactQueryClientProvider>
+          {children}
+        </ReactQueryClientProvider>
         <Footer />
       </body>
     </html>

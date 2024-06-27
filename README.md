@@ -16,8 +16,8 @@ To run the **6valley** application in your local environment, follow these steps
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-nextjs-app.git
-cd your-nextjs-app
+git clone https://github.com/moinulhossainmahim/6valley.git
+cd 6valley
 ```
 
 ### 2. Build the Docker Image

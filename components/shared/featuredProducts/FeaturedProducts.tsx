@@ -1,9 +1,31 @@
+'use client';
+
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
+
 import Stars from "../stars";
 import { Badge } from "@/components/ui/badge";
-import { AiFillThunderbolt } from "react-icons/ai";
+import { getProducts } from "@/services/getProducts";
+import SkeletonLoader from "../skeleton-loader";
 
 const FeaturedProducts = () => {
+  const { data, isLoading, isError, isFetching } = useQuery({
+    queryFn: getProducts,
+    queryKey: ['featured']
+  })
+
+  if (isLoading) {
+    return (
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+        {Array.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).map((value) => (
+          <div className="col-span-1 flex flex-col items-center group p-2 bg-white shadow-md rounded-md">
+            <SkeletonLoader />
+          </div>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
       <div className="col-span-1 flex flex-col items-center group p-2 bg-white shadow-md rounded-md">

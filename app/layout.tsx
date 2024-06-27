@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
+
 import "./globals.css";
+
 import OfferNotification from "@/components/shared/offerNotification";
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
@@ -22,6 +25,7 @@ export default function RootLayout({
         <OfferNotification />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

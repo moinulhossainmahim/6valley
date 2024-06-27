@@ -7,10 +7,10 @@ import { FaYoutube, FaApple } from "react-icons/fa6";
 const FooterBottom = () => {
   return (
     <div>
-       <div className="relative w-full h-[400px] bg-cover bg-center bg-[url('/assets/footer-bg.png')]">
+       <div className="relative w-full bg-cover bg-center bg-[url('/assets/footer-bg.png')]">
         <div className="absolute inset-0 bg-[#171C2E] opacity-[0.92]"></div>
         <div className="relative flex h-full flex-col">
-          <div className="bg-[#193a67] opacity-[.7] h-[20%] w-full flex justify-between items-center px-24">
+          <div className="bg-[#193a67] opacity-[.7] h-[80px] w-full flex justify-between items-center px-24">
             <span></span>
             <div>
               <ul className="flex gap-6">
@@ -96,7 +96,7 @@ const FooterBottom = () => {
               </ul>
             </div>
           </div>
-          <div className="h-[20%] bg-[#193a67] flex justify-center items-center opacity-[0.7]">
+          <div className="h-[70px] bg-[#193a67] flex justify-center items-center opacity-[0.7]">
             <h5 className="text-white text-sm">{new Date().getFullYear()} COPYRIGHT All Rights Reserved By 6amMart.com</h5>
           </div>
         </div>

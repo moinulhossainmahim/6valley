@@ -10,7 +10,7 @@ const FooterBottom = () => {
        <div className="relative w-full bg-cover bg-center bg-[url('/assets/footer-bg.png')]">
         <div className="absolute inset-0 bg-[#171C2E] opacity-[0.92]"></div>
         <div className="relative flex h-full flex-col">
-          <div className="bg-[#193a67] opacity-[.7] h-[80px] w-full flex justify-between items-center px-24">
+          <div className="bg-[#193a67] opacity-[.7] h-[80px] w-full flex justify-between items-center px-2 lg:px-24">
             <span></span>
             <div>
               <ul className="flex gap-6">

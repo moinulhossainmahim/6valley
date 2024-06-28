@@ -10,8 +10,8 @@ const FooterBottom = () => {
        <div className="relative w-full bg-cover bg-center bg-[url('/assets/footer-bg.png')]">
         <div className="absolute inset-0 bg-[#171C2E] opacity-[0.92]"></div>
         <div className="relative flex h-full flex-col">
-          <div className="bg-[#193a67] opacity-[.7] h-[80px] w-full flex justify-between items-center px-2 lg:px-24">
-            <span></span>
+          <div className="bg-[#193a67] opacity-[.7] w-full flex-col sm:flex-row py-8 gap-4 sm:gap-0 flex justify-between sm:items-center px-8 lg:px-24">
+            <span className="hidden md:block"></span>
             <div>
               <ul className="flex gap-6">
                 <li className="cursor-pointer">
@@ -34,12 +34,12 @@ const FooterBottom = () => {
             <div className="flex items-center gap-4">
               <FiPhoneCall size={25} color="white" />
               <div className="text-white">
-                <h4 className="font-semibold text-lg">Hotline</h4>
+                <h4 className="font-semibold text-sm sm:text-lg">Hotline</h4>
                 <p className="text-sm">+90-327-5345543</p>
               </div>
             </div>
           </div>
-          <div className="h-[80%] flex justify-between px-20 py-8 opacity-[0.8] flex-wrap">
+          <div className="flex px-20 py-8 opacity-[0.8] flex-wrap gap-6 md:gap-8 lg:gap-0 justify-center md:justify-between">
             <div className="flex flex-col w-[300px] gap-4">
               <div className="flex gap-2 items-center w-[25%] text-white">
                 <Image src='/assets/logo.png' style={{ height: '40px', width: '30px' }} height={100} width={100} alt="6valley-logo" />
@@ -51,7 +51,7 @@ const FooterBottom = () => {
                 <p className="text-sm text-gray-300">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
                 <p className="text-gray-300 text-sm">support@example.com</p>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 flex-col sm:flex-row justify-center items-center">
                 <div className="bg-black flex gap-1 items-center p-2">
                   <Image src='/assets/store.png' style={{ height: '30px', width: '30px' }} height={100} width={100} alt="playstore-logo" />
                   <div>
@@ -96,7 +96,7 @@ const FooterBottom = () => {
               </ul>
             </div>
           </div>
-          <div className="h-[70px] bg-[#193a67] flex justify-center items-center opacity-[0.7]">
+          <div className="py-6 bg-[#193a67] flex justify-center items-center opacity-[0.7]">
             <h5 className="text-white text-sm">{new Date().getFullYear()} COPYRIGHT All Rights Reserved By 6amMart.com</h5>
           </div>
         </div>

@@ -1,7 +1,7 @@
-export const getProducts = async () => {
+export const getProducts = async (url: string) => {
   try {
     const response = await fetch(
-      'https://6valley.6amtech.com/api/v1/products/top-rated?guest_id=1&limit=10&&offset=1',
+      url,
       {
         method: "GET",
           headers: {

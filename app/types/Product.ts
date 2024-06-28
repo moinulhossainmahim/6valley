@@ -1,3 +1,5 @@
+import { ICategory } from "./Category";
+
 export interface IProduct {
   id: number;
   images: string[];
@@ -7,8 +9,6 @@ export interface IProduct {
   discount: number;
   created_at: string;
   reviews_avg_rating: string;
-  category: {
-    id: number;
-    name: string;
-  },
+  category: ICategory;
+  category_id: number;
 };

@@ -16,12 +16,12 @@ const Header = () => {
 
   return (
     <header>
-      <div className="bg-[#0D1D35] text-white py-2 px-16 flex justify-between items-center">
+      <div className="bg-[#0D1D35] text-white py-2 px-2 2xl:px-[10%] flex justify-between items-center">
         <div className="flex gap-6 items-center">
-          <Button className="rounded-full bg-[#1B7FED]" size='sm'>Become a Seller</Button>
-          <p>Free Express Shipping</p>
+          <Button className="rounded-full bg-[#1B7FED] hover:bg-[#1b80edd5]" size='sm'>Become a Seller</Button>
+          <p className="hidden md:block">Free Express Shipping</p>
         </div>
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-4 items-center">
           <div className="relative inline-block text-white">
             <select className="text-white appearance-none pl-2 pr-8 py-2 bg-[#0D1D35]">
               <option>USD</option>
@@ -44,15 +44,17 @@ const Header = () => {
               </svg>
             </div>
           </div>
-          <div>
-            <FaTwitter />
-          </div>
-          <div>
-            <FaFacebookSquare />
-          </div>
-          <div>
-            <FaInstagram />
-          </div>
+          <ul className="gap-4 hidden md:flex">
+            <li className="cursor-pointer">
+              <FaTwitter className="hover:text-gray-200" />
+            </li>
+            <li className="cursor-pointer">
+              <FaFacebookSquare className="hover:text-gray-200" />
+            </li>
+            <li className="cursor-pointer">
+              <FaInstagram className="hover:text-gray-200" />
+            </li>
+          </ul>
         </div>
       </div>
       <HeaderTop />

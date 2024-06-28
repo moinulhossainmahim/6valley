@@ -22,8 +22,8 @@ const HeaderBottom = ({ toggleCategory, isOpen } : HeaderBottomProps) => {
   }
 
   return (
-    <div className="flex items-center px-2 2xl:px-[10%] gap-32 w-full h-[65px] border border-b relative">
-      <button className="flex gap-4 bg-[#1B7FED] items-center h-full px-2 text-white w-[20%] hover:bg-[#1b80edf7] transition-all" onClick={toggleCategory}>
+    <div className="hidden md:flex items-center px-2 2xl:px-[10%] gap-16 lg:gap-32 w-full h-[65px] border border-b relative">
+      <button className="flex gap-4 bg-[#1B7FED] items-center h-full px-2 text-white w-fit lg:w-[20%] hover:bg-[#1b80edf7] transition-all" onClick={toggleCategory}>
         <AiOutlineMenu />
         <h5 className="text-xs lg:text-base">Browse Category</h5>
         <div>
@@ -32,23 +32,23 @@ const HeaderBottom = ({ toggleCategory, isOpen } : HeaderBottomProps) => {
       </button>
       <div>
         <ul className="flex gap-4 items-center">
-          <li className="text-sm lg:text-base ">Home</li>
-          <li className="text-sm lg:text-base relative">
+          <li className="cursor-pointer hover:text-gray-700 text-sm lg:text-base">Home</li>
+          <li className="cursor-pointer hover:text-gray-700 text-sm lg:text-base relative">
             <select className="pl-2 pr-2 py-2">
               <option>Offers</option>
             </select>
           </li>
-          <li className="text-sm lg:text-base relative">
+          <li className="cursor-pointer hover:text-gray-700 text-sm lg:text-base relative">
             <select className="pl-2 pr-2 py-2">
               <option>Stores</option>
             </select>
           </li>
-          <li className="text-sm lg:text-base relative">
+          <li className="cursor-pointer hover:text-gray-700 text-sm lg:text-base relative">
             <select className="pl-2 pr-2 py-2">
               <option>Brands</option>
             </select>
           </li>
-          <li className="text-sm lg:text-base flex items-center gap-2">
+          <li className="cursor-pointer hover:text-gray-700 text-sm lg:text-base flex items-center gap-2">
             <p>
               Discounted Products
             </p>

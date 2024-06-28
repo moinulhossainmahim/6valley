@@ -1,16 +1,35 @@
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Separator } from "@/components/ui/separator";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+'use client';
+
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image"
 import { CiHeart } from "react-icons/ci";
 import { FiShoppingBag } from "react-icons/fi";
 import { TbArrowsShuffle2 } from "react-icons/tb";
 
+import { getCategories } from "@/app/services/getCategories";
+import { Separator } from "@/components/ui/separator";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { ICategory } from "@/app/types/Category";
+
 const MobileNav = () => {
+  const { data, isLoading } = useQuery({
+    queryFn: async() => await getCategories('https://6valley.6amtech.com/api/v1/categories?guest_id=1'),
+    queryKey: ['categories']
+  })
+
   return (
     <div className="ml-5 block md:hidden">
       <Sheet>
@@ -41,7 +60,11 @@ const MobileNav = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Categories</SelectLabel>
-                    <SelectItem value="Men's Cloth">Men's Cloth</SelectItem>
+                    {data?.map((category: ICategory) => (
+                        <SelectItem value={category.name} key={category.id}>
+                          {category.name}
+                        </SelectItem>
+                    ))}
                   </SelectGroup>
                 </SelectContent>
               </Select>

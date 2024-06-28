@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { getProducts } from "@/app/services/getProducts";
-import { IProduct } from "@/app/types/Product";
+import { IProduct } from "@/app/types";
 import { ProductsLoader } from "../loader";
 import Product from "../product";
 import EmptyProductList from "../empty-list/EmptyProductList";

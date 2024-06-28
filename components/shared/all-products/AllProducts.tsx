@@ -1,12 +1,13 @@
 'use client';
 
-import { Separator } from "@/components/ui/separator";
 import { useQuery } from "@tanstack/react-query";
+
+import { Separator } from "@/components/ui/separator";
 import { getProducts } from "@/app/services/getProducts";
+import { IProduct } from "@/app/types";
 import { ProductsLoader } from "../loader";
 import EmptyProductList from "../empty-list";
 import Product from "../product";
-import { IProduct } from "@/app/types/Product";
 
 const AllProducts = () => {
   const { data, isLoading } = useQuery({

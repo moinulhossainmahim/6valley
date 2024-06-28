@@ -1,12 +1,11 @@
 import Image from "next/image";
+import { AiFillThunderbolt } from "react-icons/ai";
 
-import { IProduct } from "@/app/types/Product";
+import { IProduct, ICategory } from "@/app/types";
 import { isNewProduct } from "@/utils/isNewProduct";
 import { Badge } from "@/components/ui/badge";
-import { AiFillThunderbolt } from "react-icons/ai";
-import Stars from "../stars";
-import { ICategory } from "@/app/types/Category";
 import { getCategory } from "@/utils/getCategory";
+import Stars from "../stars";
 
 interface ProductProps {
   product: IProduct;

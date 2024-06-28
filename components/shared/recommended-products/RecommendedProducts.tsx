@@ -1,6 +1,7 @@
-import FeaturedProducts from "../featuredProducts";
+import FeaturedProducts from "../featured-products";
+import LatestProducts from "../latest-products";
 import { Tabs, Tab } from "../tabs/Tabs";
-import TopRatedProducts from "../topRatedProducts";
+import TopRatedProducts from "../top-rated-products";
 
 const RecommendedProducts = () => {
   return (
@@ -20,9 +21,7 @@ const RecommendedProducts = () => {
           </div>
         </Tab>
         <Tab label="Latest Products">
-          <div>
-            Latest Products
-          </div>
+          <LatestProducts />
         </Tab>
         <Tab label="New Arrivals">
           <div>

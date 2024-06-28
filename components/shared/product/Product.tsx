@@ -5,12 +5,15 @@ import { isNewProduct } from "@/utils/isNewProduct";
 import { Badge } from "@/components/ui/badge";
 import { AiFillThunderbolt } from "react-icons/ai";
 import Stars from "../stars";
+import { ICategory } from "@/app/types/Category";
+import { getCategory } from "@/utils/getCategory";
 
 interface ProductProps {
   product: IProduct;
+  categories: ICategory[];
 };
 
-const Product = ({ product } : ProductProps) => {
+const Product = ({ product, categories } : ProductProps) => {
   return (
     <div className="col-span-1 flex flex-col items-center group p-2 bg-white shadow-md rounded-md">
       <div className="aspect-square w-full relative overflow-hidden mb-4">
@@ -41,7 +44,7 @@ const Product = ({ product } : ProductProps) => {
           <Stars count={Number(product.reviews_avg_rating ? product.reviews_avg_rating : 0)} />
           <p className="text-[#9B9B9B]">({product.reviews_count ? product.reviews_count : 0})</p>
         </div>
-        {/* <p className="text-[#9B9B9B] text-sm">{product.category.name}</p> */}
+        <p className="text-[#9B9B9B] text-sm">{getCategory(categories, product.category_id)?.name ?? ''}</p>
         <h4 className="font-semibold">{product.name.length > 20 ? `${product.name.substring(0, 20)}...` : product.name}</h4>
         <div className="flex gap-1">
           {product.discount ? (

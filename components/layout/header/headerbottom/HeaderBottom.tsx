@@ -17,13 +17,9 @@ const HeaderBottom = ({ toggleCategory, isOpen } : HeaderBottomProps) => {
     queryKey: ['categories']
   })
 
-  if (isLoading) {
-    return null;
-  }
-
   return (
     <div className="hidden md:flex items-center px-2 2xl:px-[10%] gap-16 lg:gap-32 w-full h-[65px] border border-b relative">
-      <button className="flex gap-4 bg-[#1B7FED] items-center h-full px-2 text-white w-fit lg:w-[20%] hover:bg-[#1b80edf7] transition-all" onClick={toggleCategory}>
+      <button className="flex gap-4 bg-[#1B7FED] items-center h-full px-2 text-white w-fit lg:w-[20%] hover:bg-[#1b80edf7] transition-all justify-center" onClick={toggleCategory}>
         <AiOutlineMenu />
         <h5 className="text-xs lg:text-base">Browse Category</h5>
         <div>
@@ -56,7 +52,7 @@ const HeaderBottom = ({ toggleCategory, isOpen } : HeaderBottomProps) => {
           </li>
         </ul>
       </div>
-      {isOpen ? (
+      {isOpen && !isLoading? (
         <div className="w-[300px] border border-t-0 bg-white z-10 absolute lg:hidden block shadow-md bg-card overflow-hidden left-1 top-20 text-sm">
           <div className="max-h-[370px] overflow-y-auto">
             {data.map((category: ICategory, index: number) => (

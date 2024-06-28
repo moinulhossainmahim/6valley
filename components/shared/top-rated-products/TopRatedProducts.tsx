@@ -14,7 +14,12 @@ const FeaturedProducts = () => {
     queryKey: ['top-rated']
   })
 
-  if (isLoading) {
+  const { data: categories, isLoading: isCategoryLoading } = useQuery({
+    queryFn: async() => await getProducts('https://6valley.6amtech.com/api/v1/products/categories?guest_id=1&limit=10&&offset=1'),
+    queryKey: ['categories']
+  })
+
+  if (isLoading || isCategoryLoading) {
     return (
       <ProductsLoader />
     )
@@ -27,7 +32,7 @@ const FeaturedProducts = () => {
       ) : null}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {data.products?.map((product: IProduct) => (
-          <Product key={product.id} product={product} />
+          <Product key={product.id} product={product} categories={categories} />
         ))}
       </div>
     </>

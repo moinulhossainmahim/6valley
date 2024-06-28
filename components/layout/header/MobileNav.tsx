@@ -7,8 +7,6 @@ import {
 } from "@/components/ui/sheet"
 import Image from "next/image"
 import { CiHeart } from "react-icons/ci";
-import { FaFacebookSquare, FaUserCircle } from "react-icons/fa";
-import { FaTwitter, FaInstagram } from "react-icons/fa6";
 import { FiShoppingBag } from "react-icons/fi";
 import { TbArrowsShuffle2 } from "react-icons/tb";
 

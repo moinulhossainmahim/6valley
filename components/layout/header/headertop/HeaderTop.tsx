@@ -34,21 +34,21 @@ const HeaderTop = () => {
       </div>
       <div className="hidden md:flex gap-4 items-center justify-center py-4">
         <button>
-          <FaUserCircle className="text-[#A1B1C2]" size={25} />
+          <FaUserCircle className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={25} />
         </button>
         <div className="border-r border-gray-300 h-[30px]"></div>
         <button className="relative">
-          <TbArrowsShuffle2 className="text-[#A1B1C2]" size={25} />
+          <TbArrowsShuffle2 className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={25} />
           <span className="absolute top-[-4px] right-[-2px] bg-[#1B7FED] rounded-full w-4 h-4 flex justify-center items-center text-xs text-white">6</span>
         </button>
         <div className="border-r border-gray-300 h-[30px]"></div>
         <button className="relative">
-          <CiHeart className="text-[#A1B1C2]" size={25} />
+          <CiHeart className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={25} />
           <span className="absolute top-[-4px] right-[-2px] bg-[#1B7FED] rounded-full w-4 h-4 flex justify-center items-center text-xs text-white">6</span>
         </button>
         <div className="border-r border-gray-300 h-[30px]"></div>
         <button className="relative">
-          <FiShoppingBag className="text-[#A1B1C2]" size={25} />
+          <FiShoppingBag className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={25} />
           <span className="absolute top-[-4px] right-[-2px] bg-[#1B7FED] rounded-full w-4 h-4 flex justify-center items-center text-xs text-white">6</span>
         </button>
       </div>

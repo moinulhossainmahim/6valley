@@ -4,7 +4,7 @@ import { CiDiscount1 } from "react-icons/ci";
 const HeaderBottom = () => {
   return (
     <div className="flex items-center px-[10%] gap-32 w-full h-[65px] border border-b">
-      <button className="flex gap-4 bg-[#1B7FED] items-center h-full px-4 text-white w-[20%]">
+      <button className="flex gap-4 bg-[#1B7FED] items-center h-full px-4 text-white w-[20%] hover:bg-[#1b80edf7] transition-all">
         <AiOutlineMenu />
         <h5>Browse Category</h5>
         <div>

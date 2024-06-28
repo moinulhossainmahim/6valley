@@ -1,5 +1,6 @@
 import FeaturedProducts from "../featuredProducts";
 import { Tabs, Tab } from "../tabs/Tabs";
+import TopRatedProducts from "../topRatedProducts";
 
 const RecommendedProducts = () => {
   return (
@@ -11,9 +12,7 @@ const RecommendedProducts = () => {
           <FeaturedProducts />
         </Tab>
         <Tab label="Top Rated">
-          <div>
-            Top Rated Products
-          </div>
+          <TopRatedProducts />
         </Tab>
         <Tab label="Best Selling">
           <div>

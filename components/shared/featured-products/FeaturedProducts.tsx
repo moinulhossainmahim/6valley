@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { getProducts } from "@/app/services/getProducts";
 import { IProduct } from "@/app/types/Product";
-import ProductsLoader from "../loader/ProductsLoader";
+import { ProductsLoader } from "../loader";
 import Product from "../product";
 
 const FeaturedProducts = () => {

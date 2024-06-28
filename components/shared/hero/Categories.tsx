@@ -5,8 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 import { getCategories } from "@/app/services/getCategories";
 import { ICategory } from "@/app/types/Category";
-import { categories } from "./test-data";
-import { Skeleton } from "@/components/ui/skeleton";
+import { CategoryLoader } from "../loader";
 
 const Categories = () => {
   const { data, isLoading } = useQuery({
@@ -16,20 +15,16 @@ const Categories = () => {
 
   if (isLoading) {
     return (
-      <div className="w-1/5 border border-t-0 bg-white flex flex-col gap-1">
-        {Array.from([1, 2, 3, 4, 5, 6, 7, 8].map(value => (
-          <Skeleton className="h-[55px] w-full" />
-        )))}
-      </div>
+      <CategoryLoader />
     )
   }
 
   return (
-    <div className="w-1/5 border border-t-0 bg-white">
+    <div className="w-1/5 hidden lg:block border border-t-0 bg-white">
       <div className="max-h-[500px] overflow-y-auto">
         {data.map((category: ICategory, index: number) => (
-          <button key={category.id} className={`flex w-full ${index == categories.length - 1 ? '' : 'border-b'} p-4 justify-between items-center hover:bg-gray-100 transition-all`}>
-            <span>{category.name}</span>
+          <button key={category.id} className={`flex w-full ${index == data.length - 1 ? '' : 'border-b'} p-4 justify-between items-center hover:bg-gray-100 transition-all`}>
+            <span className="text-sm 2xl:text-base">{category.name}</span>
             <IoIosArrowForward size={20} />
           </button>
         ))}

@@ -4,8 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import { IoIosArrowForward } from "react-icons/io";
 
 import { getCategories } from "@/app/services/getCategories";
-import { ICategory } from "@/app/types/Category";
-import { CategoryLoader } from "../loader";
+import { ICategory } from "@/app/types";
+import { CategoryLoader } from "../shared/loader";
 
 const Categories = () => {
   const { data, isLoading } = useQuery({

@@ -1,5 +1,5 @@
 import { getCategories } from "@/app/services/getCategories";
-import { ICategory } from "@/app/types/Category";
+import { ICategory } from "@/app/types";
 import { useQuery } from "@tanstack/react-query";
 import { AiOutlineMenu } from "react-icons/ai";
 import { CiDiscount1 } from "react-icons/ci";

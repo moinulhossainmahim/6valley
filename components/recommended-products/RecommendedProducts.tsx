@@ -1,6 +1,6 @@
 import FeaturedProducts from "../featured-products";
 import LatestProducts from "../latest-products";
-import { Tabs, Tab } from "../tabs/Tabs";
+import { Tabs, Tab } from "../shared/tabs/Tabs";
 import TopRatedProducts from "../top-rated-products";
 
 const RecommendedProducts = () => {

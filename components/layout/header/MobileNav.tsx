@@ -1,7 +1,7 @@
 'use client';
 
-import { useQuery } from "@tanstack/react-query";
 import Image from "next/image"
+import { useQuery } from "@tanstack/react-query";
 import { CiHeart } from "react-icons/ci";
 import { FiShoppingBag } from "react-icons/fi";
 import { TbArrowsShuffle2 } from "react-icons/tb";
@@ -22,7 +22,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { ICategory } from "@/app/types/Category";
+import { ICategory } from "@/app/types";
 
 const MobileNav = () => {
   const { data, isLoading } = useQuery({

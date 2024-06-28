@@ -4,9 +4,9 @@ import { useQuery } from "@tanstack/react-query";
 
 import { getProducts } from "@/app/services/getProducts";
 import { IProduct } from "@/app/types";
-import { ProductsLoader } from "../loader";
-import Product from "../product";
-import EmptyProductList from "../empty-list/EmptyProductList";
+import { ProductsLoader } from "../shared/loader";
+import EmptyProductList from "../shared/empty-list";
+import Product from "../shared/product";
 
 const FeaturedProducts = () => {
   let { data, isLoading } = useQuery({

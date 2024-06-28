@@ -4,14 +4,14 @@ import { useQuery } from "@tanstack/react-query";
 
 import { getProducts } from "@/app/services/getProducts";
 import { IProduct } from "@/app/types";
-import { ProductsLoader } from "../loader";
-import Product from "../product";
-import EmptyProductList from "../empty-list/EmptyProductList";
+import { ProductsLoader } from "../shared/loader";
+import EmptyProductList from "../shared/empty-list";
+import Product from "../shared/product";
 
-const FeaturedProducts = () => {
+const LatestProducts = () => {
   const { data, isLoading } = useQuery({
-    queryFn: async() => await getProducts('https://6valley.6amtech.com/api/v1/products/top-rated?guest_id=1&limit=10&&offset=1'),
-    queryKey: ['top-rated']
+    queryFn: async() => await getProducts('https://6valley.6amtech.com/api/v1/products/latest?guest_id=1&limit=10&&offset=1'),
+    queryKey: ['latest']
   })
 
   const { data: categories, isLoading: isCategoryLoading } = useQuery({
@@ -39,4 +39,4 @@ const FeaturedProducts = () => {
   )
 }
 
-export default FeaturedProducts;
+export default LatestProducts;

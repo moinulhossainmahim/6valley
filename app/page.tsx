@@ -1,6 +1,6 @@
-import AllProducts from "@/components/shared/all-products";
-import Hero from "@/components/shared/hero";
-import RecommendedProducts from "@/components/shared/recommended-products";
+import AllProducts from "@/components/all-products";
+import Hero from "@/components/hero";
+import RecommendedProducts from "@/components/recommended-products";
 
 export default function Home() {
   return (

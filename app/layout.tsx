@@ -3,7 +3,7 @@ import { Mulish } from "next/font/google";
 
 import "./globals.css";
 
-import OfferNotification from "@/components/shared/offer-notification";
+import OfferNotification from "@/components/offer-notification";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import ReactQueryClientProvider from "@/utils/ReactQueryClientProvider";

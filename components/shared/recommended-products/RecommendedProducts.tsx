@@ -6,7 +6,7 @@ import TopRatedProducts from "../top-rated-products";
 const RecommendedProducts = () => {
   return (
     <div className="py-16 bg-[#fcfcfc]">
-      <h2 className="text-center font-bold text-lg mb-4">Recommended For You</h2>
+      <h2 className="text-center font-bold text-lg mb-8">Recommended For You</h2>
       <div>
       <Tabs>
         <Tab label="Featured Products">

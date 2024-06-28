@@ -23,12 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mulish.className}>
-        <OfferNotification />
-        <Header />
         <ReactQueryClientProvider>
-          {children}
+          <OfferNotification />
+          <Header />
+            {children}
+          <Footer />
         </ReactQueryClientProvider>
-        <Footer />
       </body>
     </html>
   );

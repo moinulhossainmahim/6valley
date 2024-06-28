@@ -9,7 +9,7 @@ import Product from "../product";
 import EmptyProductList from "../empty-list/EmptyProductList";
 
 const FeaturedProducts = () => {
-  const { data, isLoading } = useQuery({
+  let { data, isLoading } = useQuery({
     queryFn: async() => await getProducts('https://6valley.6amtech.com/api/v1/products/featured?guest_id=1&limit=10&&offset=1'),
     queryKey: ['featured']
   })

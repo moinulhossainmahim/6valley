@@ -1,9 +1,19 @@
+'use client'
+
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { FaTwitter, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import HeaderTop from "./headertop";
 import HeaderBottom from "./headerbottom";
 
 const Header = () => {
+  const [isOpenCategory, setIsOpenCategory] = useState(false);
+
+  const toggleCategory = () => {
+    setIsOpenCategory((prev) => !prev);
+  }
+
   return (
     <header>
       <div className="bg-[#0D1D35] text-white py-2 px-16 flex justify-between items-center">
@@ -46,7 +56,7 @@ const Header = () => {
         </div>
       </div>
       <HeaderTop />
-      <HeaderBottom />
+      <HeaderBottom toggleCategory={toggleCategory} isOpen={isOpenCategory} />
     </header>
   )
 }

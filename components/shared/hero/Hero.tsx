@@ -3,7 +3,7 @@ import HeroImageGallery from "./HeroImageGallery";
 
 const Hero = () => {
   return (
-    <div className="px-[10%] bg-[#fcfcfc] flex gap-[5%]">
+    <div className="px-2 2xl:px-[10%] bg-[#fcfcfc] flex">
       <Categories />
       <HeroImageGallery />
     </div>

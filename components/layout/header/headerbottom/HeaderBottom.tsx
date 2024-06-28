@@ -55,7 +55,7 @@ const HeaderBottom = ({ toggleCategory, isOpen } : HeaderBottomProps) => {
       {isOpen && !isLoading? (
         <div className="w-[300px] border border-t-0 bg-white z-10 absolute lg:hidden block shadow-md bg-card overflow-hidden left-1 top-20 text-sm">
           <div className="max-h-[370px] overflow-y-auto">
-            {data.map((category: ICategory, index: number) => (
+            {data?.map((category: ICategory, index: number) => (
               <button key={category.id} className={`flex w-full ${index == data.length - 1 ? '' : 'border-b'} p-4 justify-between items-center hover:bg-gray-100 transition-all`}>
                 <span className="text-sm 2xl:text-base">{category.name}</span>
                 <IoIosArrowForward size={20} />

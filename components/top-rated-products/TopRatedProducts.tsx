@@ -27,11 +27,11 @@ const FeaturedProducts = () => {
 
   return (
     <>
-      {!(data.total_size) ? (
+      {!(data?.total_size) ? (
         <EmptyProductList title="Oops, Empty list!" subTitle="No featured products found" />
       ) : null}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-        {data.products?.map((product: IProduct) => (
+        {data?.products?.map((product: IProduct) => (
           <Product key={product.id} product={product} categories={categories} />
         ))}
       </div>

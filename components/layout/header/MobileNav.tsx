@@ -30,6 +30,10 @@ const MobileNav = () => {
     queryKey: ['categories']
   })
 
+  if (isLoading) {
+    return null;
+  }
+
   return (
     <div className="ml-5 block md:hidden">
       <Sheet>
@@ -53,21 +57,25 @@ const MobileNav = () => {
           <Separator className="border border-gray-200" />
           <div>
             <ul className="flex gap-4 flex-col">
-              <Select>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Select a Category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Categories</SelectLabel>
-                    {data?.map((category: ICategory) => (
-                        <SelectItem value={category.name} key={category.id}>
-                          {category.name}
-                        </SelectItem>
-                    ))}
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
+              {!(data.length) ? (
+                <h4>Empty categories</h4>
+              ) : (
+                <Select>
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select a Category" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Categories</SelectLabel>
+                      {data?.map((category: ICategory) => (
+                          <SelectItem value={category.name} key={category.id}>
+                            {category.name}
+                          </SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              )}
               <li className="cursor-pointer hover:text-gray-700 text-sm lg:text-base relative">
                 <select className="pl-2 pr-2 py-2">
                   <option>Offers</option>

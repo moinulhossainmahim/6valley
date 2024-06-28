@@ -12,9 +12,11 @@ const AllProducts = () => {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           <div className="col-span-1 flex flex-col items-center group p-2 bg-white shadow-md rounded-md">
             <div className="aspect-square w-full relative overflow-hidden mb-4">
-              <Image fill  className="object-cover h-full w-full group-hover:scale-110 transition"
+              <Image  className="object-cover h-full w-full group-hover:scale-110 transition"
                 src='/assets/p-2.png'
                 alt="product-2"
+                height={100}
+                width={100}
               />
               <div className="absolute top-0 left-0 flex flex-col gap-2">
                 <Badge>New</Badge>

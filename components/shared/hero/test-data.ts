@@ -1,36 +1,36 @@
-import { ICategory } from "./types";
+import { ICategory } from "@/app/types/Category";
 
 export const categories: ICategory[] = [
   {
     id: 1,
-    title: "Women's Fashion",
+    name: "Women's Fashion",
   },
   {
     id: 2,
-    title: "Men's Fashion",
+    name: "Men's Fashion",
   },
   {
     id: 3,
-    title: "Personal Care",
+    name: "Personal Care",
   },
   {
     id: 4,
-    title: "Phone & Telecommunication",
+    name: "Phone & Telecommunication",
   },
   {
     id: 5,
-    title: "Jewellery & Watches",
+    name: "Jewellery & Watches",
   },
   {
     id: 6,
-    title: "Home & Appliances",
+    name: "Home & Appliances",
   },
   {
     id: 7,
-    title: "Bags & Shoes",
+    name: "Bags & Shoes",
   },
   {
     id: 8,
-    title: "Beauty, Health & Hair",
+    name: "Beauty, Health & Hair",
   },
 ];

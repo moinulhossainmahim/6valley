@@ -6,6 +6,7 @@ import { FaApple } from "react-icons/fa";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { SlEarphonesAlt, SlGlobe } from "react-icons/sl";
 import { CiMail } from "react-icons/ci";
+
 import { Button } from "@/components/ui/button";
 
 const FooterTop = () => {

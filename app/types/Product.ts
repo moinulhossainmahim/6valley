@@ -11,4 +11,5 @@ export interface IProduct {
   reviews_avg_rating: string;
   category: ICategory;
   category_id: number;
+  flash_deal_status: number;
 };

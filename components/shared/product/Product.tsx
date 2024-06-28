@@ -29,9 +29,9 @@ const Product = ({ product } : ProductProps) => {
           ) : null}
         </div>
         {product.flash_deal_status ? (
-          <div className="flush-deal-container">
-            <div className="flush-deal-badge">
-                <AiFillThunderbolt color="white" size={20}  className="flush-deal-icon" />
+          <div className="absolute top-[-109px] right-[-109px] rotate-[45deg] bg-[#1b7fed]">
+            <div className="relative top-[5px] right-[-41px] w-[180px] h-[145px] text-white">
+                <AiFillThunderbolt color="white" size={20}  className="absolute left-[55px] top-[116px] rotate-[-45deg]" />
             </div>
           </div>
         ) : null}

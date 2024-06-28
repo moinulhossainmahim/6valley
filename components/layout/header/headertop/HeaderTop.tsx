@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
@@ -7,13 +5,13 @@ import { TbArrowsShuffle2 } from "react-icons/tb";
 import { CiHeart } from "react-icons/ci";
 import { FiShoppingBag } from "react-icons/fi";
 
+import { Button } from "@/components/ui/button";
+import Logo from "../Logo";
+
 const HeaderTop = () => {
   return (
     <div className="flex items-center px-32 py-2 justify-between w-full border-b border">
-      <div className="flex gap-2 items-center w-[25%]">
-        <Image src='/assets/logo.png' style={{ height: '40px', width: '30px' }} height={100} width={100} alt="6valley-logo" />
-        <h4 className="font-bold text-xl">6valley</h4>
-      </div>
+      <Logo />
       <div className="py-[2px] pl-6 pr-1 flex items-center gap-4 border border-[rgba(222, 222, 222, 1)] rounded-full w-[40%]">
         <button className="flex gap-2">
           <AiOutlineMenu />

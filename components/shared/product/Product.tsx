@@ -37,9 +37,9 @@ const Product = ({ product } : ProductProps) => {
         ) : null}
       </div>
       <div className="flex items-center flex-col">
-        <div className="flex">
-          <Stars count={2} />
-          <p className="text-[#9B9B9B]">(10)</p>
+        <div className="flex items-center">
+          <Stars count={Number(product.reviews_avg_rating ? product.reviews_avg_rating : 0)} />
+          <p className="text-[#9B9B9B]">({product.reviews_count ? product.reviews_count : 0})</p>
         </div>
         {/* <p className="text-[#9B9B9B] text-sm">{product.category.name}</p> */}
         <h4 className="font-semibold">{product.name.length > 20 ? `${product.name.substring(0, 20)}...` : product.name}</h4>

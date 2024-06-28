@@ -12,4 +12,5 @@ export interface IProduct {
   category: ICategory;
   category_id: number;
   flash_deal_status: number;
+  reviews_count: number;
 };

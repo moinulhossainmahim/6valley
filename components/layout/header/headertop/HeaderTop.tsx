@@ -4,10 +4,11 @@ import { FaUserCircle } from "react-icons/fa";
 import { TbArrowsShuffle2 } from "react-icons/tb";
 import { CiHeart } from "react-icons/ci";
 import { FiShoppingBag } from "react-icons/fi";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 import { Button } from "@/components/ui/button";
-import Logo from "../Logo";
 import MobileNav from "../MobileNav";
+import Logo from "../Logo";
 
 const HeaderTop = () => {
   return (
@@ -17,9 +18,7 @@ const HeaderTop = () => {
         <button className="flex gap-2">
           <AiOutlineMenu />
           <div>
-            <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
-            </svg>
+            <MdKeyboardArrowDown />
           </div>
         </button>
         <div className="border-r border-gray-300 h-[35px]"></div>

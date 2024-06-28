@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaTwitter, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
-import { FaTwitter, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import HeaderTop from "./headertop";
 import HeaderBottom from "./headerbottom";
 
@@ -28,9 +29,7 @@ const Header = () => {
               <option>BD</option>
             </select>
             <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-              <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
-              </svg>
+              <MdKeyboardArrowDown />
             </div>
           </div>
           <div className="relative inline-block text-white">
@@ -39,9 +38,7 @@ const Header = () => {
               <option>BN</option>
             </select>
             <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-              <svg className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
-              </svg>
+              <MdKeyboardArrowDown />
             </div>
           </div>
           <ul className="gap-4 hidden md:flex">

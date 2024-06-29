@@ -33,7 +33,7 @@ const HeaderTop = () => {
       </div>
       <div className="hidden md:flex gap-4 items-center justify-center py-4">
         <button>
-          <FaUserCircle className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={28} />
+          <FaUserCircle className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={30} />
         </button>
         <div className="border-r border-gray-300 h-[30px]"></div>
         <button className="relative">

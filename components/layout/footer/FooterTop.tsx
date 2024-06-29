@@ -57,20 +57,20 @@ const FooterTop = () => {
           <p className="text-xs text-center">Download our app from play store and app store</p>
         </div>
       </div>
-      <div className="bg-[#09336F] lg:items-center gap-6 lg:gap-0 px-8 md:px-20 text-white flex w-full justify-between py-6 rounded-xl flex-col lg:flex-row mt-8">
-        <div className="w-1/2">
+      <div className="bg-[#09336F] lg:items-center gap-6 lg:gap-0 px-4 md:px-16 text-white flex w-full justify-between py-6 rounded-xl flex-col lg:flex-row mt-8">
+        <div className="w-full lg:w-1/2">
           <h1 className="mb-2 font-semibold">Newsletter</h1>
           <p className="text-sm">Be the first one to know  about discounts, offers and events</p>
         </div>
         <div className="">
-          <form className="flex gap-2 lg:justify-center w-[400px] md:w-[500px]">
-            <div className="relative w-[70%] bg-white py-2 rounded-lg">
+          <form className="flex gap-2 lg:justify-center w-[500px] md:w-[760px]">
+            <div className="relative w-[70%] bg-white py-1 rounded-lg">
             <input type="email" className="text-gray pl-10 pr-4 py-2 border rounded-lg border-none focus:text-gray-600 focus:outline-none" placeholder="Enter your email" />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <CiMail size={20} color="gray" />
               </div>
-              <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                <Button className="bg-[#1B7FED] hover:bg-[#1b9ced] text-white cursor-pointer" onClick={(e) => e.stopPropagation()}>Submit</Button>
+              <div className="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
+                <Button className="bg-[#1B7FED] hover:bg-[#1b9ced] text-white cursor-pointer px-[2em] text-lg" onClick={(e) => e.stopPropagation()}>Submit</Button>
               </div>
             </div>
           </form>

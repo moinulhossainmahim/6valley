@@ -2,7 +2,7 @@ import { getCategories } from "@/app/services/getCategories";
 import { ICategory } from "@/app/types";
 import { useQuery } from "@tanstack/react-query";
 import { AiOutlineMenu } from "react-icons/ai";
-import { CiDiscount1 } from "react-icons/ci";
+import { RiDiscountPercentFill } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
@@ -48,7 +48,7 @@ const HeaderBottom = ({ toggleCategory, isOpen } : HeaderBottomProps) => {
             <p>
               Discounted Products
             </p>
-            <CiDiscount1 size={20} color="#FFBE00" />
+            <RiDiscountPercentFill size={20} color="#FFBE00" />
           </li>
         </ul>
       </div>

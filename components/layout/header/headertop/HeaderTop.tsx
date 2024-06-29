@@ -12,9 +12,9 @@ import Logo from "../Logo";
 
 const HeaderTop = () => {
   return (
-    <div className="flex items-center px-2 2xl:px-[10%] py-2 justify-between w-full border-b border">
+    <div className="flex items-center px-2 2xl:px-[10%] py-4 justify-between w-full border-b border">
       <Logo />
-      <div className="py-[2px] pl-6 pr-1 hidden lg:flex items-center gap-4 border border-[rgba(222, 222, 222, 1)] rounded-full w-[400px]">
+      <div className="py-[6px] pl-6 pr-1 hidden lg:flex items-center gap-4 border border-[rgba(222, 222, 222, 1)] rounded-full w-[38%]">
         <button className="flex gap-2">
           <AiOutlineMenu />
           <div>
@@ -27,7 +27,7 @@ const HeaderTop = () => {
           placeholder="Search for items or store..."
           className="flex-grow p-2 outline-none"
         />
-        <Button className="rounded-e-full bg-[#1B7FED] hover:bg-[#1b80edd5]">
+        <Button className="rounded-e-full bg-[#1B7FED] hover:bg-[#1b80edd5] w-[10%]">
           <IoSearchOutline size={20} />
         </Button>
       </div>

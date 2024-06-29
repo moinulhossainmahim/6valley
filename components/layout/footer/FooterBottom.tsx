@@ -40,7 +40,7 @@ const FooterBottom = () => {
             </div>
           </div>
           <div className="flex px-8 lg:px-20 py-8 opacity-[0.8] gap-16 flex-wrap  justify-normal md:justify-center">
-            <div className="flex flex-col w-[250px] gap-4">
+            <div className="flex flex-col w-[300px] gap-4">
               <div className="flex gap-2 items-center w-[25%] text-white">
                 <Image src='/assets/logo.png' style={{ height: '40px', width: '30px' }} height={100} width={100} alt="6valley-logo" />
                 <h4 className="font-bold text-xl">6valley</h4>
@@ -55,20 +55,20 @@ const FooterBottom = () => {
                 <div className="bg-black flex gap-1 items-center w-full 2xl:w-1/2 p-2">
                   <Image src='/assets/store.png' style={{ height: '30px', width: '30px' }} height={100} width={100} alt="playstore-logo" />
                   <div>
-                    <h6 className="font-semibold text-gray-300">GET IT ON</h6>
-                    <h6 className="font-bold text-white">Google Play</h6>
+                    <h6 className="font-semibold text-gray-300 text-sm">GET IT ON</h6>
+                    <h6 className="font-bold text-white text-sm">Google Play</h6>
                   </div>
                 </div>
                 <div className="bg-black flex gap-1 items-center p-2 w-full 2xl:w-1/2">
                   <FaApple size={25} color="white" />
                   <div>
-                    <h6 className="font-semibold text-gray-300">GET IT ON</h6>
-                    <h6 className="font-bold text-white">Google Play</h6>
+                    <h6 className="font-semibold text-gray-300 text-sm">Download ON</h6>
+                    <h6 className="font-bold text-white text-sm">App Store</h6>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-4 w-[250px]">
+            <div className="flex flex-col gap-4 w-[300px]">
               <h6 className="text-white font-semibold">Accounts</h6>
               <ul className="flex flex-col gap-4">
                 <li className="text-sm text-gray-300 cursor-pointer inline-block">Become a Delivery Man</li>
@@ -77,7 +77,7 @@ const FooterBottom = () => {
                 <li className="text-sm text-gray-300 cursor-pointer">Help & Support</li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4 w-[250px]">
+            <div className="flex flex-col gap-4 w-[300px]">
               <h6 className="text-white font-semibold">Quick Links</h6>
               <ul className="flex flex-col gap-4">
                 <li className="text-sm text-gray-300 cursor-pointer inline-block">Flash Deals</li>
@@ -86,7 +86,7 @@ const FooterBottom = () => {
                 <li className="text-sm text-gray-300 cursor-pointer">New Arrivals</li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4 w-[250px]">
+            <div className="flex flex-col gap-4 w-[300px]">
               <h6 className="text-white font-semibold">Other</h6>
               <ul className="flex flex-col gap-4">
                 <li className="text-sm text-gray-300 cursor-pointer inline-block">Privacy Policy</li>

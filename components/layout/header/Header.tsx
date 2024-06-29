@@ -41,7 +41,7 @@ const Header = () => {
               <MdKeyboardArrowDown />
             </div>
           </div>
-          <ul className="gap-4 hidden md:flex">
+          <ul className="gap-6 hidden md:flex">
             <li className="cursor-pointer">
               <FaTwitter className="hover:text-gray-200" />
             </li>

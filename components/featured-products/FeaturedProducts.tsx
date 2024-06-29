@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 
-import { getProducts } from "@/app/services/getProducts";
+import { getData } from "@/app/services";
 import { IProduct } from "@/app/types";
 import { FEATURED_PRODUCTS_URL } from "@/constants/url";
 import { ProductsLoader } from "../shared/loader";
@@ -12,7 +12,7 @@ import Error from "../shared/error";
 
 const FeaturedProducts = () => {
   let { data, isLoading, isError } = useQuery({
-    queryFn: async() => await getProducts(FEATURED_PRODUCTS_URL),
+    queryFn: async() => await getData(FEATURED_PRODUCTS_URL),
     queryKey: ['featured']
   })
 

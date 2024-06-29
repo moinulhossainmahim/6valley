@@ -1,4 +1,4 @@
-import { getCategories } from "@/app/services/getCategories";
+import { getData } from "@/app/services";
 import { ICategory } from "@/app/types";
 import { useQuery } from "@tanstack/react-query";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -13,7 +13,7 @@ interface HeaderBottomProps {
 
 const HeaderBottom = ({ toggleCategory, isOpen } : HeaderBottomProps) => {
   const { data, isLoading } = useQuery({
-    queryFn: async() => await getCategories('https://6valley.6amtech.com/api/v1/categories?guest_id=1'),
+    queryFn: async() => await getData('https://6valley.6amtech.com/api/v1/categories?guest_id=1'),
     queryKey: ['categories']
   })
 

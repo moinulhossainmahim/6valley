@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { Separator } from "@/components/ui/separator";
-import { getProducts } from "@/app/services/getProducts";
+import { getData } from "@/app/services";
 import { IProduct } from "@/app/types";
 import { ALL_PRODUCTS_URL } from "@/constants/url";
 import { ProductsLoader } from "../shared/loader";
@@ -13,7 +13,7 @@ import Error from "../shared/error";
 
 const AllProducts = () => {
   const { data, isLoading, isError } = useQuery({
-    queryFn: async() => await getProducts(ALL_PRODUCTS_URL),
+    queryFn: async() => await getData(ALL_PRODUCTS_URL),
     queryKey: ['all-products']
   })
 
@@ -34,7 +34,7 @@ const AllProducts = () => {
   }
 
   return (
-    <div className="flex justify-center py-20 pt-4 bg-[#fcfcfc]">
+    <div className="flex justify-center py-16 pt-2 bg-[#fcfcfc]">
       <div className="w-[90%] lg:w-[80%]">
         <h1 className="font-semibold text-2xl mb-4">All Products</h1>
         <Separator className="mb-8" />

@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { IoIosArrowForward } from "react-icons/io";
 
-import { getCategories } from "@/app/services/getCategories";
+import { getData } from "@/app/services";
 import { ICategory } from "@/app/types";
 import { CategoryLoader } from "../shared/loader";
 import { CATEGORIES_URL } from "@/constants/url";
@@ -11,7 +11,7 @@ import Error from "../shared/error";
 
 const Categories = () => {
   let { data, isLoading, isError } = useQuery({
-    queryFn: async() => await getCategories(CATEGORIES_URL),
+    queryFn: async() => await getData(CATEGORIES_URL),
     queryKey: ['categories']
   })
 

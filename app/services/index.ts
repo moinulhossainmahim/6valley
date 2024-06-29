@@ -1,4 +1,4 @@
-export const getProducts = async (url: string) => {
+export const getData = async (url: string) => {
   try {
     const response = await fetch(
       url,

@@ -6,7 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { FiShoppingBag } from "react-icons/fi";
 import { TbArrowsShuffle2 } from "react-icons/tb";
 
-import { getCategories } from "@/app/services/getCategories";
+import { getData } from "@/app/services";
 import { Separator } from "@/components/ui/separator";
 import {
   Select,
@@ -27,7 +27,7 @@ import { CATEGORIES_URL } from "@/constants/url";
 
 const MobileNav = () => {
   const { data, isLoading } = useQuery({
-    queryFn: async() => await getCategories(CATEGORIES_URL),
+    queryFn: async() => await getData(CATEGORIES_URL),
     queryKey: ['categories']
   })
 

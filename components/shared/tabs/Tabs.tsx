@@ -18,7 +18,7 @@ const Tabs = ({ children } : { children: any[] }) => {
           <button
             key={child.props.label}
             className={`tracking-wider ${child.props.label === 'New Arrivals' ? 'flex gap-2' : ''} transition-all text-sm lg:text-base ${
-              activeTab === child.props.label ? 'border-b-[3px] border-[#1b7fed] py-2 text-[#1b7fed]' : 'text-gray-700 py-2 border-b-[3px] border-transparent'
+              activeTab === child.props.label ? 'border-b-[3px] border-[#1b7fed] py-2 text-[#1b7fed] font-bold' : 'text-gray-700 py-2 border-b-[3px] border-transparent'
             }`}
             onClick={e => handleClick(e, child.props.label)}
           >

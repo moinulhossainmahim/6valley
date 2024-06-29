@@ -14,7 +14,7 @@ const HeaderTop = () => {
   return (
     <div className="flex items-center px-2 2xl:px-[10%] py-4 justify-between w-full border-b border">
       <Logo />
-      <div className="py-[6px] pl-6 pr-1 hidden lg:flex items-center gap-4 border border-[rgba(222, 222, 222, 1)] rounded-full w-[38%]">
+      <div className="py-[3px] pl-6 pr-[3px] hidden lg:flex items-center gap-4 border border-[rgba(222, 222, 222, 1)] rounded-full w-[38%]">
         <button className="flex gap-2">
           <AiOutlineMenu />
           <div>
@@ -33,7 +33,7 @@ const HeaderTop = () => {
       </div>
       <div className="hidden md:flex gap-4 items-center justify-center py-4">
         <button>
-          <FaUserCircle className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={25} />
+          <FaUserCircle className="text-[#A1B1C2] hover:text-gray-800 transition-colors" size={28} />
         </button>
         <div className="border-r border-gray-300 h-[30px]"></div>
         <button className="relative">

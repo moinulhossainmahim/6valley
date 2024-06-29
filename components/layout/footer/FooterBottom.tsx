@@ -10,7 +10,7 @@ const FooterBottom = () => {
        <div className="relative w-full bg-cover bg-center bg-[url('/assets/footer-bg.png')]">
         <div className="absolute inset-0 bg-[#171C2E] opacity-[0.92]"></div>
         <div className="relative flex h-full flex-col">
-          <div className="bg-[#193a67] opacity-[.7] w-full flex-col sm:flex-row py-8 gap-4 sm:gap-0 flex justify-between sm:items-center px-8 lg:px-24">
+          <div className="bg-[#193a67] opacity-[.9] text-white w-full flex-col sm:flex-row py-8 gap-4 sm:gap-0 flex justify-between sm:items-center px-8 lg:px-24">
             <span className="hidden md:block"></span>
             <div>
               <ul className="flex gap-6">
@@ -39,7 +39,7 @@ const FooterBottom = () => {
               </div>
             </div>
           </div>
-          <div className="flex px-8 lg:px-20 py-8 opacity-[0.8] gap-16 flex-wrap  justify-normal md:justify-center">
+          <div className="flex px-8 lg:px-20 py-8 opacity-[0.9] text-white gap-16 flex-wrap  justify-normal md:justify-center">
             <div className="flex flex-col w-[300px] gap-4">
               <div className="flex gap-2 items-center w-[25%] text-white">
                 <Image src='/assets/logo.png' style={{ height: '40px', width: '30px' }} height={100} width={100} alt="6valley-logo" />
@@ -96,7 +96,7 @@ const FooterBottom = () => {
               </ul>
             </div>
           </div>
-          <div className="py-6 bg-[#193a67] flex justify-center items-center opacity-[0.7]">
+          <div className="py-6 bg-[#193a67] flex justify-center items-center opacity-[0.9] text-white">
             <h5 className="text-white text-sm">{new Date().getFullYear()} COPYRIGHT All Rights Reserved By 6amMart.com</h5>
           </div>
         </div>

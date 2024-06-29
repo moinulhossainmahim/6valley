@@ -11,47 +11,47 @@ import { Button } from "@/components/ui/button";
 
 const FooterTop = () => {
   return (
-    <div className="bg-[#F2F3F4] flex gap-2 flex-col px-4 lg:px-[10%] py-16 overflow-hidden">
+    <div className="bg-[#F2F3F4] flex flex-col px-4 lg:px-[10%] py-6 overflow-hidden">
       <div className="flex gap-8 lg:gap-4 flex-wrap justify-center">
         <div className="flex flex-col gap-3 w-[250px] items-center justify-center">
-          <BiDollarCircle size={25} />
+          <BiDollarCircle size={27} />
           <h1 className="font-semibold text-lg">Great Value</h1>
           <p className="text-xs text-center">We offer competitive prices on over 100 million items.</p>
         </div>
-        <div className="border-r border-gray-300 h-[160px] hidden lg:block"></div>
+        <div className="border-r border-gray-300 h-[150px] hidden lg:block"></div>
 
         <div className="flex flex-col gap-3 w-[250px] items-center justify-center">
-          <LiaShippingFastSolid size={25} />
+          <LiaShippingFastSolid size={27} />
           <h1 className="font-semibold text-lg">Whole Country Shipping</h1>
           <p className="text-xs text-center">We ship all over the country at any time, anywhere </p>
         </div>
-        <div className="border-r border-gray-300 h-[160px] hidden lg:block"></div>
+        <div className="border-r border-gray-300 h-[150px] hidden lg:block"></div>
 
         <div className="flex flex-col gap-3 w-[250px] items-center justify-center">
-          <BiWallet size={25} />
+          <BiWallet size={27} />
           <h1 className="font-semibold text-lg">Safe Payment</h1>
           <p className="text-xs text-center">Pay with secure payment methods.</p>
         </div>
-        <div className="border-r border-gray-300 h-[160px] hidden lg:block"></div>
+        <div className="border-r border-gray-300 h-[150px] hidden lg:block"></div>
 
         <div className="flex flex-col gap-3 w-[250px] items-center justify-center">
-          <SlEarphonesAlt size={25} />
+          <SlEarphonesAlt size={27} />
           <h1 className="font-semibold text-lg">24/7 Support</h1>
           <p className="text-xs text-center">Pay with secure payment methods.</p>
         </div>
-        <div className="border-r border-gray-300 h-[160px] hidden lg:block"></div>
+        <div className="border-r border-gray-300 h-[150px] hidden lg:block"></div>
 
         <div className="flex flex-col gap-3 w-[250px] items-center justify-center">
-          <SlGlobe size={25} />
+          <SlGlobe size={27} />
           <h1 className="font-semibold text-lg">Multiple Language</h1>
           <p className="text-xs text-center">Our comes in with multiple languages..</p>
         </div>
-        <div className="hidden lg:block border-r border-gray-300 h-[160px]"></div>
+        <div className="hidden lg:block border-r border-gray-300 h-[150px]"></div>
 
         <div className="flex flex-col gap-3 w-[250px] items-center justify-center">
           <div className="flex gap-1 items-center">
-            <AiFillAndroid size={25} />
-            <FaApple size={25} />
+            <AiFillAndroid size={27} />
+            <FaApple size={27} />
           </div>
           <h1 className="font-semibold text-lg">Shop Better</h1>
           <p className="text-xs text-center">Download our app from play store and app store</p>

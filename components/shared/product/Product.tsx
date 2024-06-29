@@ -35,7 +35,7 @@ const Product = ({ product } : ProductProps) => {
         </div>
         {product.flash_deal_status ? (
           <div className="absolute top-[-109px] right-[-109px] rotate-[45deg] bg-[#1b7fed] group-hover:z-10">
-            <div className="relative top-[5px] right-[-41px] w-[180px] h-[145px] text-white">
+            <div className="relative top-[14px] right-[-33px] w-[180px] h-[162px] text-white">
                 <AiFillThunderbolt color="white" size={20}  className="absolute left-[55px] top-[116px] rotate-[-45deg]" />
             </div>
           </div>

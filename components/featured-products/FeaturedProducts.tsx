@@ -4,24 +4,32 @@ import { useQuery } from "@tanstack/react-query";
 
 import { getProducts } from "@/app/services/getProducts";
 import { IProduct } from "@/app/types";
+import { CATEGORIES_URL, FEATURED_PRODUCTS_URL } from "@/constants/url";
 import { ProductsLoader } from "../shared/loader";
 import EmptyProductList from "../shared/empty-list";
 import Product from "../shared/product";
+import Error from "../shared/error";
 
 const FeaturedProducts = () => {
-  let { data, isLoading } = useQuery({
-    queryFn: async() => await getProducts('https://6valley.6amtech.com/api/v1/products/featured?guest_id=1&limit=10&&offset=1'),
+  let { data, isLoading, isError } = useQuery({
+    queryFn: async() => await getProducts(FEATURED_PRODUCTS_URL),
     queryKey: ['featured']
   })
 
-  const { data: categories, isLoading: isCategoryLoading } = useQuery({
-    queryFn: async() => await getProducts('https://6valley.6amtech.com/api/v1/products/categories?guest_id=1&limit=10&&offset=1'),
+  const { data: categories, isLoading: isCategoryLoading, isError: isCategoryError } = useQuery({
+    queryFn: async() => await getProducts(CATEGORIES_URL),
     queryKey: ['categories']
   })
 
   if (isLoading || isCategoryLoading) {
     return (
       <ProductsLoader />
+    )
+  }
+
+  if (isError || isCategoryError) {
+    return (
+      <Error />
     )
   }
 

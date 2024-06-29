@@ -16,4 +16,12 @@ export interface IProduct {
   category_id: number;
   flash_deal_status: number;
   reviews_count: number;
+  seller: {
+    id: number;
+    shop: {
+      id: number;
+      name: string;
+      seller_id: number;
+    };
+  },
 };

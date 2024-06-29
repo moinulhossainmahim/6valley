@@ -8,7 +8,7 @@ import { PiShoppingBagFill } from "react-icons/pi";
 import { IProduct, ICategory } from "@/app/types";
 import { isNewProduct } from "@/utils/isNewProduct";
 import { Badge } from "@/components/ui/badge";
-import { getCategory } from "@/utils/getCategory";
+import { PRODUCT_IMAGE_URL } from "@/constants/url";
 import Stars from "../stars";
 
 interface ProductProps {
@@ -21,7 +21,7 @@ const Product = ({ product, categories } : ProductProps) => {
     <div className="col-span-1 flex flex-col items-center group p-2 bg-white shadow-md rounded-md">
       <div className="aspect-square w-full relative overflow-hidden mb-4">
         <Image  className="object-cover h-full w-full group-hover:hidden transition-[display]"
-          src={`https://6valley.6amtech.com/storage/app/public/product/${product.images[0]}`}
+          src={`${PRODUCT_IMAGE_URL}/${product.images[0]}`}
           alt={product.name}
           height={100}
           width={100}
@@ -63,8 +63,8 @@ const Product = ({ product, categories } : ProductProps) => {
           <Stars count={Number(product.reviews_avg_rating ? product.reviews_avg_rating : 0)} />
           <p className="text-[#9B9B9B]">({product.reviews_count ? product.reviews_count : 0})</p>
         </div>
-        <p className="text-[#9B9B9B] text-sm">{getCategory(categories, product.category_id)?.name ?? ''}</p>
-        <h4 className="font-semibold">{product.name.length > 20 ? `${product.name.substring(0, 20)}...` : product.name}</h4>
+        <p className="text-[#9B9B9B] text-sm">{product?.seller?.shop?.name}</p>
+        <h4 className="font-semibold">{product?.name?.length > 20 ? `${product?.name?.substring(0, 20)}...` : product?.name}</h4>
         <div className="flex gap-1">
           {product.discount ? (
             <span className="line-through text-[#9B9B9B]">{product.unit_price}$</span>

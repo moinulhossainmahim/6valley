@@ -1,12 +1,14 @@
 import FeaturedProducts from "../featured-products";
 import LatestProducts from "../latest-products";
+import NewArrivals from "../new-arrivals";
+import EmptyProductList from "../shared/empty-list";
 import { Tabs, Tab } from "../shared/tabs/Tabs";
 import TopRatedProducts from "../top-rated-products";
 
 const RecommendedProducts = () => {
   return (
-    <div className="py-16 bg-[#fcfcfc]">
-      <h2 className="text-center font-bold text-lg mb-8">Recommended For You</h2>
+    <div className="py-12 bg-[#fcfcfc]">
+      <h2 className="text-center font-semibold tracking-widest text-2xl mb-8">Recommended For You</h2>
       <div>
       <Tabs>
         <Tab label="Featured Products">
@@ -16,17 +18,13 @@ const RecommendedProducts = () => {
           <TopRatedProducts />
         </Tab>
         <Tab label="Best Selling">
-          <div>
-            Best Selling Products
-          </div>
+          <EmptyProductList title="Empty list" subTitle="No products found for best selling" />
         </Tab>
         <Tab label="Latest Products">
           <LatestProducts />
         </Tab>
         <Tab label="New Arrivals">
-          <div>
-            New Arrivals
-          </div>
+          <NewArrivals />
         </Tab>
       </Tabs>
     </div>

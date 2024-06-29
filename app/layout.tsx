@@ -26,7 +26,7 @@ export default function RootLayout({
         <ReactQueryClientProvider>
           <OfferNotification />
           <Header />
-            {children}
+          {children}
           <Footer />
         </ReactQueryClientProvider>
       </body>

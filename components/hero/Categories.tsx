@@ -6,16 +6,24 @@ import { IoIosArrowForward } from "react-icons/io";
 import { getCategories } from "@/app/services/getCategories";
 import { ICategory } from "@/app/types";
 import { CategoryLoader } from "../shared/loader";
+import { CATEGORIES_URL } from "@/constants/url";
+import Error from "../shared/error";
 
 const Categories = () => {
-  const { data, isLoading } = useQuery({
-    queryFn: async() => await getCategories('https://6valley.6amtech.com/api/v1/categories?guest_id=1'),
+  let { data, isLoading, isError } = useQuery({
+    queryFn: async() => await getCategories(CATEGORIES_URL),
     queryKey: ['categories']
   })
 
   if (isLoading) {
     return (
       <CategoryLoader />
+    )
+  }
+
+  if (!isLoading && isError) {
+    return (
+      <Error />
     )
   }
 

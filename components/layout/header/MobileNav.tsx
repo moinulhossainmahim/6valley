@@ -23,10 +23,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { ICategory } from "@/app/types";
+import { CATEGORIES_URL } from "@/constants/url";
 
 const MobileNav = () => {
   const { data, isLoading } = useQuery({
-    queryFn: async() => await getCategories('https://6valley.6amtech.com/api/v1/categories?guest_id=1'),
+    queryFn: async() => await getCategories(CATEGORIES_URL),
     queryKey: ['categories']
   })
 
@@ -57,7 +58,7 @@ const MobileNav = () => {
           <Separator className="border border-gray-200" />
           <div>
             <ul className="flex gap-4 flex-col">
-              {!(data.length) ? (
+              {!(data?.length) ? (
                 <h4>Empty categories</h4>
               ) : (
                 <Select>

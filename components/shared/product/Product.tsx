@@ -5,7 +5,7 @@ import { LuGitCompare } from "react-icons/lu";
 import { MdOutlineWifi2Bar } from "react-icons/md";
 import { PiShoppingBagFill } from "react-icons/pi";
 
-import { IProduct, ICategory } from "@/app/types";
+import { IProduct } from "@/app/types";
 import { isNewProduct } from "@/utils/isNewProduct";
 import { Badge } from "@/components/ui/badge";
 import { PRODUCT_IMAGE_URL } from "@/constants/url";
@@ -13,10 +13,9 @@ import Stars from "../stars";
 
 interface ProductProps {
   product: IProduct;
-  categories: ICategory[];
 };
 
-const Product = ({ product, categories } : ProductProps) => {
+const Product = ({ product } : ProductProps) => {
   return (
     <div className="col-span-1 flex flex-col items-center group p-2 bg-white shadow-md rounded-md">
       <div className="aspect-square w-full relative overflow-hidden mb-4">

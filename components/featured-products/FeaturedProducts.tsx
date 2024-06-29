@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { getProducts } from "@/app/services/getProducts";
 import { IProduct } from "@/app/types";
-import { CATEGORIES_URL, FEATURED_PRODUCTS_URL } from "@/constants/url";
+import { FEATURED_PRODUCTS_URL } from "@/constants/url";
 import { ProductsLoader } from "../shared/loader";
 import EmptyProductList from "../shared/empty-list";
 import Product from "../shared/product";
@@ -16,18 +16,13 @@ const FeaturedProducts = () => {
     queryKey: ['featured']
   })
 
-  const { data: categories, isLoading: isCategoryLoading, isError: isCategoryError } = useQuery({
-    queryFn: async() => await getProducts(CATEGORIES_URL),
-    queryKey: ['categories']
-  })
-
-  if (isLoading || isCategoryLoading) {
+  if (isLoading) {
     return (
       <ProductsLoader />
     )
   }
 
-  if (isError || isCategoryError) {
+  if (!isLoading && isError) {
     return (
       <Error />
     )
@@ -40,7 +35,7 @@ const FeaturedProducts = () => {
       ) : null}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {data?.products?.map((product: IProduct) => (
-          <Product key={product.id} product={product} categories={categories} />
+          <Product key={product.id} product={product} />
         ))}
       </div>
     </>
